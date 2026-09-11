@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette — Paiement | La Croqueuse de Chocolat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">La Croqueuse<small>DE CHOCOLAT — BEAN TO BAR</small></a>
+    <nav class="nav" id="nav">
+      <a href="ateliers.html" class="active">Ateliers</a>
+      <a href="parcours-sensoriel.html">Parcours sensoriel</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="index.html#journal">Journal</a>
+      <a href="#" class="btn btn-primary nav-cta">Réserver un atelier</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-primary">Réserver un atelier</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="mockup-flag">Maquette visuelle — non fonctionnelle</span>
+    <p class="section-tag">Paiement</p>
+    <h1>Finalisez votre réservation</h1>
+  </div>
+</section>
+
+<section id="paiement">
+  <div class="wrap">
+    <div class="pay-wrap" id="payView">
+      <div class="pay-recap">
+        <p class="eyebrow">Récapitulatif</p>
+        <h3>Atelier de dégustation à domicile</h3>
+        <div class="recap-line"><span>Date</span><span id="recapDate">—</span></div>
+        <div class="recap-line"><span>Horaire</span><span id="recapHeure">—</span></div>
+        <div class="recap-line"><span>Durée</span><span>1h30</span></div>
+        <div class="recap-line"><span>Participants</span><span>4 à 10 pers.</span></div>
+        <div class="recap-line total"><span>Total</span><span>50€ TTC</span></div>
+      </div>
+      <div class="pay-form">
+        <form id="fakePayForm">
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Email</label>
+            <input type="email" placeholder="vous@exemple.fr" required>
+          </div>
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Nom sur la carte</label>
+            <input type="text" placeholder="Prénom Nom" required>
+          </div>
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Numéro de carte</label>
+            <input type="text" placeholder="4242 4242 4242 4242" required>
+          </div>
+          <div class="row-2">
+            <div>
+              <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Expiration</label>
+              <input type="text" placeholder="MM / AA" required>
+            </div>
+            <div>
+              <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">CVC</label>
+              <input type="text" placeholder="123" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:24px;width:100%;justify-content:center">Payer 50€ TTC</button>
+          <p style="margin-top:14px;font-size:.8rem;color:var(--brun-cacao);text-align:center">Formulaire de démonstration — aucune donnée n'est envoyée ni conservée.</p>
+        </form>
+      </div>
+    </div>
+
+    <div id="confirmView" style="display:none">
+      <div class="pay-form confirmation" style="max-width:520px;margin:0 auto">
+        <div class="check">✓</div>
+        <h3>Réservation confirmée</h3>
+        <p>Votre atelier est réservé pour le <strong id="confirmDate"></strong> à <strong id="confirmHeure"></strong>.<br>Un email de confirmation vous serait envoyé automatiquement.</p>
+        <a href="apercu-reservation.html" class="btn btn-ghost" style="margin-top:20px">Retour au calendrier</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© <span id="year"></span> La Croqueuse de Chocolat — Maquette de démonstration</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const jour = params.get('jour') || '13';
+const heure = params.get('heure') || '14:00';
+const jours = {1:"jeudi",2:"vendredi",3:"samedi",4:"dimanche",5:"lundi",6:"mardi",7:"mercredi",8:"jeudi",9:"vendredi",10:"samedi",11:"dimanche",12:"lundi",13:"vendredi",14:"mercredi",15:"jeudi",16:"vendredi",17:"samedi",18:"dimanche",19:"lundi",20:"mardi",21:"mercredi",22:"jeudi",23:"vendredi",24:"samedi",25:"dimanche",26:"lundi",27:"mardi",28:"mercredi",29:"jeudi",30:"vendredi"};
+const dateTexte = `${jours[jour] || ''} ${jour} novembre`;
+
+document.getElementById('recapDate').textContent = dateTexte;
+document.getElementById('recapHeure').textContent = heure;
+
+document.getElementById('fakePayForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  document.getElementById('confirmDate').textContent = dateTexte;
+  document.getElementById('confirmHeure').textContent = heure;
+  document.getElementById('payView').style.display = 'none';
+  document.getElementById('confirmView').style.display = 'block';
+});
+</script>
+</body>
+</html>

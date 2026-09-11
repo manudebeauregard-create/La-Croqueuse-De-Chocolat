@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette — Réservation en ligne | La Croqueuse de Chocolat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">La Croqueuse<small>DE CHOCOLAT — BEAN TO BAR</small></a>
+    <nav class="nav" id="nav">
+      <a href="ateliers.html" class="active">Ateliers</a>
+      <a href="parcours-sensoriel.html">Parcours sensoriel</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="index.html#journal">Journal</a>
+      <a href="#" class="btn btn-primary nav-cta">Réserver un atelier</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-primary">Réserver un atelier</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="mockup-flag">Maquette visuelle — non fonctionnelle</span>
+    <p class="section-tag">Réservation en ligne</p>
+    <h1>À quoi pourrait ressembler la prise de rendez-vous</h1>
+    <p class="lede">Ceci est un aperçu de style uniquement : les créneaux affichés ne sont pas réels. Une fois ton compte de réservation créé (Acuity Scheduling), on habille le vrai calendrier avec ce même univers visuel.</p>
+  </div>
+</section>
+
+<section id="reserver">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">Rendez-vous</p>
+      <h2>Choisissez une date et un horaire</h2>
+    </div>
+    <div class="booking-wrap">
+      <div class="booking-summary">
+        <p class="eyebrow">Formule sélectionnée</p>
+        <h3>Atelier de dégustation à domicile</h3>
+        <p class="duree">1h30 · 4 à 10 personnes</p>
+        <p>Une dégustation guidée à travers plusieurs origines, pour apprendre à lire une tablette Bean to Bar comme un dégustateur.</p>
+      </div>
+      <div class="booking-calendar">
+        <div class="cal-nav">
+          <button aria-hidden="true">‹</button>
+          <span class="mois">Novembre 2026</span>
+          <button aria-hidden="true">›</button>
+        </div>
+        <div class="cal-grid" id="calGrid">
+          <span class="dow">L</span><span class="dow">M</span><span class="dow">M</span><span class="dow">J</span><span class="dow">V</span><span class="dow">S</span><span class="dow">D</span>
+          <span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day active" data-day="1">1</span>
+          <span class="day active" data-day="2">2</span><span class="day active" data-day="3">3</span><span class="day active" data-day="4">4</span><span class="day active" data-day="5">5</span><span class="day active" data-day="6">6</span><span class="day active" data-day="7">7</span><span class="day active" data-day="8">8</span>
+          <span class="day active" data-day="9">9</span><span class="day active" data-day="10">10</span><span class="day active" data-day="11">11</span><span class="day active" data-day="12">12</span><span class="day active selected" data-day="13">13</span><span class="day active" data-day="14">14</span><span class="day active" data-day="15">15</span>
+          <span class="day active" data-day="16">16</span><span class="day active" data-day="17">17</span><span class="day active" data-day="18">18</span><span class="day active" data-day="19">19</span><span class="day active" data-day="20">20</span><span class="day active" data-day="21">21</span><span class="day active" data-day="22">22</span>
+          <span class="day active" data-day="23">23</span><span class="day active" data-day="24">24</span><span class="day active" data-day="25">25</span><span class="day active" data-day="26">26</span><span class="day active" data-day="27">27</span><span class="day active" data-day="28">28</span><span class="day active" data-day="29">29</span>
+          <span class="day active" data-day="30">30</span>
+        </div>
+        <p class="slots-label" id="slotsLabel">Créneaux disponibles le vendredi 13 novembre</p>
+        <div class="slots" id="slotsContainer">
+          <span class="slot" data-time="10:00">10:00</span>
+          <span class="slot" data-time="14:00">14:00</span>
+          <span class="slot" data-time="16:30">16:30</span>
+          <span class="slot taken" data-time="18:00">18:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© <span id="year"></span> La Croqueuse de Chocolat — Maquette de démonstration</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+// Maquette interactive — sélection date + créneau, puis redirection vers la page de paiement (fictive)
+const jours = {1:"jeudi",2:"vendredi",3:"samedi",4:"dimanche",5:"lundi",6:"mardi",7:"mercredi",8:"jeudi",9:"vendredi",10:"samedi",11:"dimanche",12:"lundi",13:"vendredi",14:"mercredi",15:"jeudi",16:"vendredi",17:"samedi",18:"dimanche",19:"lundi",20:"mardi",21:"mercredi",22:"jeudi",23:"vendredi",24:"samedi",25:"dimanche",26:"lundi",27:"mardi",28:"mercredi",29:"jeudi",30:"vendredi"};
+
+document.querySelectorAll('#calGrid .day.active').forEach(day => {
+  day.addEventListener('click', () => {
+    document.querySelectorAll('#calGrid .day').forEach(d => d.classList.remove('selected'));
+    day.classList.add('selected');
+    const n = day.dataset.day;
+    document.getElementById('slotsLabel').textContent = `Créneaux disponibles le ${jours[n]} ${n} novembre`;
+  });
+});
+
+document.querySelectorAll('#slotsContainer .slot:not(.taken)').forEach(slot => {
+  slot.addEventListener('click', () => {
+    const selectedDay = document.querySelector('#calGrid .day.selected');
+    const jour = selectedDay ? selectedDay.dataset.day : '13';
+    const heure = slot.dataset.time;
+    window.location.href = `apercu-paiement.html?jour=${jour}&heure=${encodeURIComponent(heure)}`;
+  });
+});
+</script>
+</body>
+</html>
