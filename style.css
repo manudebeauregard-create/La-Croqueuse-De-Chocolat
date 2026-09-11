@@ -24,7 +24,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100vw}
 body{
   margin:0;
   background:var(--creme);
@@ -33,6 +33,8 @@ body{
   font-size:16px;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  max-width:100vw;
 }
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -301,3 +303,12 @@ section + section{border-top:1px solid var(--ligne)}
 .confirmation h3{font-size:1.5rem}
 .confirmation p{color:var(--brun-cacao)}
 @media (max-width:760px){.pay-wrap{grid-template-columns:1fr}}
+
+/* ---------- payment form fields (oubliés — fix) ---------- */
+.pay-form label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--noir-cacao)}
+.pay-form input{
+  width:100%;padding:12px 14px;border:1px solid var(--ligne);background:var(--creme-clair);
+  font-family:var(--sans);font-size:.95rem;color:var(--noir-cacao);border-radius:2px;
+}
+.pay-form input:focus{outline:2px solid var(--terracotta);outline-offset:1px}
+.pay-form{overflow:hidden}
