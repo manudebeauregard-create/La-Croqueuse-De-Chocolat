@@ -262,3 +262,40 @@ section + section{border-top:1px solid var(--ligne)}
 }
 .contact-form textarea{resize:vertical;min-height:110px}
 .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid var(--terracotta);outline-offset:1px}
+
+/* ---------- booking widget mockup (aperçu visuel uniquement) ---------- */
+.booking-wrap{display:grid;grid-template-columns:.55fr 1fr;gap:32px;align-items:start}
+.booking-summary{background:var(--noir-cacao);color:var(--creme);padding:32px}
+.booking-summary .eyebrow{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D89A66;margin-bottom:18px}
+.booking-summary h3{color:var(--creme-clair);font-size:1.3rem}
+.booking-summary .duree{font-size:.9rem;color:rgba(247,240,225,.7);margin-bottom:16px}
+.booking-summary p{color:rgba(247,240,225,.85);font-size:.94rem}
+.booking-calendar{background:var(--creme-clair);border:1px solid var(--ligne);padding:32px}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.cal-nav .mois{font-family:var(--serif);font-style:italic;font-size:1.25rem}
+.cal-nav button{background:none;border:1px solid var(--ligne);width:34px;height:34px;border-radius:50%;cursor:default;color:var(--noir-cacao);font-size:.95rem}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center;margin-bottom:28px}
+.cal-grid .dow{font-size:.78rem;font-weight:600;color:var(--brun-cacao);padding-bottom:8px}
+.cal-grid .day{padding:10px 0;font-size:.9rem;color:var(--ligne);border-radius:50%}
+.cal-grid .day.active{color:var(--noir-cacao)}
+.cal-grid .day.selected{background:var(--terracotta);color:var(--creme-clair);font-weight:600}
+.slots-label{font-size:.85rem;color:var(--brun-cacao);margin-bottom:14px}
+.slots{display:flex;flex-wrap:wrap;gap:10px}
+.slot{border:1px solid var(--terracotta);color:var(--terracotta-d);padding:10px 18px;font-size:.88rem;font-weight:600;border-radius:2px;background:var(--creme-clair)}
+.slot.taken{border-color:var(--ligne);color:var(--ligne);text-decoration:line-through}
+.mockup-flag{display:inline-block;background:var(--terracotta);color:var(--creme-clair);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;padding:6px 14px;margin-bottom:18px}
+@media (max-width:760px){.booking-wrap{grid-template-columns:1fr}}
+
+/* ---------- payment mockup ---------- */
+.pay-wrap{display:grid;grid-template-columns:.55fr 1fr;gap:32px;align-items:start}
+.pay-recap{background:var(--noir-cacao);color:var(--creme);padding:32px}
+.pay-recap .eyebrow{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D89A66;margin-bottom:18px}
+.pay-recap h3{color:var(--creme-clair);font-size:1.3rem}
+.recap-line{display:flex;justify-content:space-between;font-size:.92rem;padding:12px 0;border-top:1px solid rgba(247,240,225,.15)}
+.recap-line.total{font-family:var(--serif);font-size:1.15rem;color:var(--creme-clair);border-top:1px solid rgba(247,240,225,.3);padding-top:16px;margin-top:8px}
+.pay-form{background:var(--creme-clair);border:1px solid var(--ligne);padding:32px}
+.pay-form .row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.confirmation{text-align:center;padding:40px 20px}
+.confirmation .check{width:56px;height:56px;border-radius:50%;background:var(--terracotta);color:var(--creme-clair);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 20px}
+.confirmation h3{font-size:1.5rem}
+.confirmation p{color:var(--brun-cacao)}
