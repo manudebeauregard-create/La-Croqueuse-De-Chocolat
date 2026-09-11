@@ -193,3 +193,72 @@ section + section{border-top:1px solid var(--ligne)}
 @media (max-width:860px){.grid-2,.grid-3{grid-template-columns:1fr}}
 .tag-list{display:flex;gap:10px;flex-wrap:wrap;list-style:none;margin:0 0 20px;padding:0}
 .tag-list li{font-size:.78rem;letter-spacing:.03em;border:1px solid var(--ligne);padding:5px 12px;border-radius:20px;color:var(--brun-cacao)}
+
+/* ---------- offers 2-col variant ---------- */
+.offers-2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:860px){.offers-2{grid-template-columns:1fr}}
+
+/* ---------- steps (comment ça marche) ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:step}
+.step{position:relative;padding-top:8px}
+.step .step-num{font-family:var(--serif);font-style:italic;font-size:2.4rem;color:var(--terracotta);line-height:1;margin-bottom:14px;display:block}
+.step h3{font-size:1.15rem}
+.step p{color:var(--brun-cacao);font-size:.95rem}
+@media (max-width:860px){.steps{grid-template-columns:1fr;gap:32px}}
+
+/* ---------- atelier / tablette detail cards ---------- */
+.detail-cards{display:grid;gap:1px;background:var(--ligne);border:1px solid var(--ligne)}
+.detail-card{background:var(--creme-clair);padding:40px;display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:start}
+.detail-card .thumb{aspect-ratio:4/3;background:var(--brun-cacao);color:rgba(247,240,225,.55);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;text-align:center;padding:16px}
+.detail-card h3{font-size:1.5rem;margin-bottom:6px}
+.detail-card .meta{display:flex;gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--terracotta-d);margin-bottom:14px;letter-spacing:.02em}
+.detail-card p{color:var(--brun-cacao)}
+.detail-card .price-tag{font-family:var(--serif);font-size:1.3rem;color:var(--noir-cacao);margin-top:14px}
+.detail-card .cta-row{margin-top:18px}
+@media (max-width:760px){.detail-card{grid-template-columns:1fr}}
+
+/* ---------- tablette fiches (boutique) ---------- */
+.tablette-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ligne);border:1px solid var(--ligne)}
+.tablette-card{background:var(--creme-clair);display:flex;flex-direction:column}
+.tablette-visual{aspect-ratio:1/1;background:var(--noir-cacao);display:flex;align-items:center;justify-content:center;color:rgba(247,240,225,.5);font-family:var(--serif);font-style:italic;text-align:center;padding:20px}
+.tablette-body{padding:28px 26px;display:flex;flex-direction:column;flex:1}
+.tablette-body .origine{font-size:.78rem;letter-spacing:.06em;color:var(--terracotta-d);text-transform:uppercase;margin-bottom:6px}
+.tablette-body h3{font-size:1.3rem}
+.tablette-body .cacao{font-family:var(--serif);font-style:italic;color:var(--brun-cacao);margin-bottom:12px}
+.tablette-body .notes{font-size:.88rem;color:var(--brun-cacao);flex:1}
+.tablette-body .producteur{font-size:.85rem;border-top:1px solid var(--ligne);padding-top:14px;margin-top:16px;color:var(--brun-cacao)}
+.tablette-body .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.tablette-body .price-row .price{font-family:var(--serif);font-size:1.25rem}
+@media (max-width:860px){.tablette-grid{grid-template-columns:1fr}}
+
+/* ---------- testimonials ---------- */
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.testimonial{background:var(--creme-clair);border:1px solid var(--ligne);padding:28px}
+.testimonial p{font-family:var(--serif);font-style:italic;color:var(--noir-cacao);font-size:1.02rem}
+.testimonial .who{font-size:.82rem;color:var(--terracotta-d);margin-top:12px}
+@media (max-width:860px){.testimonials{grid-template-columns:1fr}}
+
+/* ---------- faq ---------- */
+.faq-item{border-top:1px solid var(--ligne);padding:24px 0}
+.faq-item:last-child{border-bottom:1px solid var(--ligne)}
+.faq-item h3{font-size:1.1rem;margin-bottom:8px}
+.faq-item p{color:var(--brun-cacao);margin:0}
+
+/* ---------- timeline (à propos) ---------- */
+.timeline{display:grid;gap:0;border-left:1px solid var(--ligne);margin-left:6px}
+.timeline-item{position:relative;padding:0 0 40px 32px}
+.timeline-item::before{content:"";position:absolute;left:-6px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--terracotta)}
+.timeline-item .year{font-family:var(--serif);font-style:italic;color:var(--terracotta-d);font-size:1rem;margin-bottom:4px}
+.timeline-item h3{font-size:1.1rem}
+.timeline-item p{color:var(--brun-cacao);font-size:.95rem}
+.timeline-item:last-child{padding-bottom:0}
+
+/* ---------- simple contact / réservation form ---------- */
+.contact-form{display:grid;gap:18px;max-width:560px}
+.contact-form label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--noir-cacao)}
+.contact-form input,.contact-form select,.contact-form textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--ligne);background:var(--creme-clair);
+  font-family:var(--sans);font-size:.95rem;color:var(--noir-cacao);border-radius:2px;
+}
+.contact-form textarea{resize:vertical;min-height:110px}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid var(--terracotta);outline-offset:1px}

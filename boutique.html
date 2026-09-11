@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique Bean to Bar — Tablettes Colombie, Madagascar, Pérou | La Croqueuse de Chocolat</title>
+<meta name="description" content="Trois tablettes Bean to Bar sélectionnées par Emmanuelle de Beauregard : Colombie 68%, Madagascar 70%, Pérou 75%.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">La Croqueuse<small>DE CHOCOLAT — BEAN TO BAR</small></a>
+    <nav class="nav" id="nav">
+      <a href="ateliers.html">Ateliers</a>
+      <a href="parcours-sensoriel.html">Parcours sensoriel</a>
+      <a href="boutique.html" class="active">Boutique</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="index.html#journal">Journal</a>
+      <a href="ateliers.html#reserver" class="btn btn-primary nav-cta">Réserver un atelier</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="ateliers.html#reserver" class="btn btn-primary">Réserver un atelier</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="section-tag">Boutique Bean to Bar</p>
+    <h1>Trois origines à croquer</h1>
+    <p class="lede">Pas besoin d'abonnement pour goûter : ces trois tablettes sont sélectionnées pour leur caractère, chacune avec l'histoire du producteur qui se cache derrière.</p>
+  </div>
+</section>
+
+<section id="tablettes">
+  <div class="wrap">
+    <div class="tablette-grid">
+      <article class="tablette-card">
+        <div class="tablette-visual">Photo à venir<br>Tablette Colombie</div>
+        <div class="tablette-body">
+          <p class="origine">Colombie</p>
+          <h3>Tablette Colombie</h3>
+          <p class="cacao">68% de cacao</p>
+          <p class="notes">Des notes fruitées et légèrement acidulées, avec une pointe florale en fin de bouche — une tablette vive, idéale pour découvrir le profil sud-américain.</p>
+          <p class="producteur">Fiche producteur à venir : histoire de la plantation et du savoir-faire local.</p>
+          <div class="price-row">
+            <span class="price">8,53€</span>
+            <a href="#commander" class="btn btn-ghost">Commander</a>
+          </div>
+        </div>
+      </article>
+      <article class="tablette-card">
+        <div class="tablette-visual">Photo à venir<br>Tablette Madagascar</div>
+        <div class="tablette-body">
+          <p class="origine">Madagascar</p>
+          <h3>Tablette Madagascar</h3>
+          <p class="cacao">70% de cacao</p>
+          <p class="notes">Le profil emblématique du cacao malgache : une acidité franche proche du fruit rouge, une belle longueur en bouche et une intensité maîtrisée.</p>
+          <p class="producteur">Fiche producteur à venir : histoire de la plantation et du savoir-faire local.</p>
+          <div class="price-row">
+            <span class="price">8,53€</span>
+            <a href="#commander" class="btn btn-ghost">Commander</a>
+          </div>
+        </div>
+      </article>
+      <article class="tablette-card">
+        <div class="tablette-visual">Photo à venir<br>Tablette Pérou</div>
+        <div class="tablette-body">
+          <p class="origine">Pérou</p>
+          <h3>Tablette Pérou</h3>
+          <p class="cacao">75% de cacao</p>
+          <p class="notes">Une intensité plus marquée, des notes boisées et légèrement épicées, pour les palais qui aiment le cacao affirmé sans amertume excessive.</p>
+          <p class="producteur">Fiche producteur à venir : histoire de la plantation et du savoir-faire local.</p>
+          <div class="price-row">
+            <span class="price">8,53€</span>
+            <a href="#commander" class="btn btn-ghost">Commander</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top:28px;font-size:.85rem;color:var(--brun-cacao)">Le paiement en ligne (Stripe) sera activé prochainement directement sur cette page. Pour commander dès maintenant, utilisez le formulaire ci-dessous.</p>
+  </div>
+</section>
+
+<section id="commander">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">Commande</p>
+      <h2>Passer commande</h2>
+    </div>
+    <form class="contact-form" name="commande-boutique" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="commande-boutique">
+      <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+      <div>
+        <label for="nom">Nom et prénom</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="adresse">Adresse de livraison</label>
+        <input type="text" id="adresse" name="adresse">
+      </div>
+      <div>
+        <label for="tablettes">Tablette(s) souhaitée(s)</label>
+        <select id="tablettes" name="tablettes">
+          <option>Colombie 68%</option>
+          <option>Madagascar 70%</option>
+          <option>Pérou 75%</option>
+          <option>Les trois origines</option>
+        </select>
+      </div>
+      <div>
+        <label for="quantite">Quantité</label>
+        <input type="number" id="quantite" name="quantite" min="1" value="1">
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-self:start">Envoyer ma commande</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="color:var(--creme-clair)">La Croqueuse<small style="color:#D89A66">DE CHOCOLAT</small></a>
+        <p style="margin-top:16px;max-width:32ch">40 Rue Emile Landrin<br>92100 Boulogne-Billancourt</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <ul>
+          <li><a href="ateliers.html">Ateliers</a></li>
+          <li><a href="parcours-sensoriel.html">Parcours sensoriel</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0608464870">06 08 46 48 70</a></li>
+          <li><a href="mailto:manudebeauregard@gmail.com">manudebeauregard@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> La Croqueuse de Chocolat</span>
+      <span>Mentions légales · CGV</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
