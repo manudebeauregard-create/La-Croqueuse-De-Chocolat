@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maquette — Paiement | La Croqueuse de Chocolat</title>
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="logo">La Croqueuse<small>DE CHOCOLAT — BEAN TO BAR</small></a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="La Croqueuse de Chocolat — By Emmanuelle"></a>
     <nav class="nav" id="nav">
       <a href="ateliers.html" class="active">Ateliers</a>
       <a href="parcours-sensoriel.html">Parcours sensoriel</a>
       <a href="boutique.html">Boutique</a>
       <a href="a-propos.html">À propos</a>
-      <a href="index.html#journal">Journal</a>
+      <a href="blog.html">Blog</a>
       <a href="#" class="btn btn-primary nav-cta">Réserver un atelier</a>
     </nav>
     <div class="nav-actions">
@@ -49,24 +49,24 @@
       <div class="pay-form">
         <form id="fakePayForm">
           <div style="margin-bottom:16px">
-            <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Email</label>
+            <label>Email</label>
             <input type="email" placeholder="vous@exemple.fr" required>
           </div>
           <div style="margin-bottom:16px">
-            <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Nom sur la carte</label>
+            <label>Nom sur la carte</label>
             <input type="text" placeholder="Prénom Nom" required>
           </div>
           <div style="margin-bottom:16px">
-            <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Numéro de carte</label>
+            <label>Numéro de carte</label>
             <input type="text" placeholder="4242 4242 4242 4242" required>
           </div>
           <div class="row-2">
             <div>
-              <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">Expiration</label>
+              <label>Expiration</label>
               <input type="text" placeholder="MM / AA" required>
             </div>
             <div>
-              <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:6px">CVC</label>
+              <label>CVC</label>
               <input type="text" placeholder="123" required>
             </div>
           </div>
@@ -95,7 +95,7 @@
   </div>
 </footer>
 
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 const jour = params.get('jour') || '13';

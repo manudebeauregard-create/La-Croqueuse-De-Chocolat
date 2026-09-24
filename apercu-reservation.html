@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maquette — Réservation en ligne | La Croqueuse de Chocolat</title>
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="logo">La Croqueuse<small>DE CHOCOLAT — BEAN TO BAR</small></a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="La Croqueuse de Chocolat — By Emmanuelle"></a>
     <nav class="nav" id="nav">
       <a href="ateliers.html" class="active">Ateliers</a>
       <a href="parcours-sensoriel.html">Parcours sensoriel</a>
       <a href="boutique.html">Boutique</a>
       <a href="a-propos.html">À propos</a>
-      <a href="index.html#journal">Journal</a>
+      <a href="blog.html">Blog</a>
       <a href="#" class="btn btn-primary nav-cta">Réserver un atelier</a>
     </nav>
     <div class="nav-actions">
@@ -31,7 +31,6 @@
     <span class="mockup-flag">Maquette visuelle — non fonctionnelle</span>
     <p class="section-tag">Réservation en ligne</p>
     <h1>À quoi pourrait ressembler la prise de rendez-vous</h1>
-    <p class="lede">Ceci est un aperçu de style uniquement : les créneaux affichés ne sont pas réels. Une fois ton compte de réservation créé (Acuity Scheduling), on habille le vrai calendrier avec ce même univers visuel.</p>
   </div>
 </section>
 
@@ -83,9 +82,8 @@
   </div>
 </footer>
 
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 <script>
-// Maquette interactive — sélection date + créneau, puis redirection vers la page de paiement (fictive)
 const jours = {1:"jeudi",2:"vendredi",3:"samedi",4:"dimanche",5:"lundi",6:"mardi",7:"mercredi",8:"jeudi",9:"vendredi",10:"samedi",11:"dimanche",12:"lundi",13:"vendredi",14:"mercredi",15:"jeudi",16:"vendredi",17:"samedi",18:"dimanche",19:"lundi",20:"mardi",21:"mercredi",22:"jeudi",23:"vendredi",24:"samedi",25:"dimanche",26:"lundi",27:"mardi",28:"mercredi",29:"jeudi",30:"vendredi"};
 
 document.querySelectorAll('#calGrid .day.active').forEach(day => {
