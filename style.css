@@ -63,7 +63,7 @@ p{margin:0 0 1em}
   padding-top:12px;padding-bottom:12px;
 }
 .logo{text-decoration:none;display:flex;align-items:center}
-.logo img{height:52px;width:auto;display:block}
+.logo img{height:64px;width:auto;display:block}
 .nav{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
 .nav a{text-decoration:none;font-size:.94rem;position:relative;padding:2px 0}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--terracotta);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
@@ -78,7 +78,7 @@ p{margin:0 0 1em}
 @media (max-width:860px){
   .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--creme)}
   .site-header .wrap{padding-top:10px;padding-bottom:10px}
-  .logo img{height:42px}
+  .logo img{height:50px}
   .nav-actions .btn-primary{display:none}
   /* Menu plein écran : tout tient dans l'écran, sans scroll */
   .nav{
@@ -201,7 +201,7 @@ section + section{border-top:1px solid var(--ligne)}
 /* ---------- footer ---------- */
 .site-footer{background:var(--noir-cacao);color:rgba(247,240,225,.75);padding:64px 0 32px}
 .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
-.footer-grid .logo img{height:44px}
+.footer-grid .logo img{height:60px}
 .footer-grid h4{color:var(--creme-clair);font-size:.95rem;font-family:var(--sans);font-weight:600;margin-bottom:14px}
 .footer-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9rem}
 .footer-grid a{text-decoration:none;color:inherit}
@@ -334,3 +334,24 @@ section + section{border-top:1px solid var(--ligne)}
 /* ---------- hero image ---------- */
 .hero-photo{aspect-ratio:4/3;margin:24px 0}
 @media (max-width:860px){.hero-photo{aspect-ratio:16/10;margin:18px 0}}
+
+/* ---------- parcours : visuel ---------- */
+.parcours-photo{aspect-ratio:21/9;margin-top:36px}
+@media (max-width:860px){.parcours-photo{aspect-ratio:16/10;margin-top:24px}}
+
+/* ---------- visuels accueil ---------- */
+.offer-photo{aspect-ratio:4/3;margin:-36px -30px 24px}
+.b2b-photo{aspect-ratio:21/9;margin:0 0 36px}
+@media (max-width:860px){.b2b-photo{aspect-ratio:16/10;margin-bottom:24px}}
+
+/* ---------- pages légales ---------- */
+.legal{max-width:72ch}
+.legal h2{font-size:1.35rem;margin:40px 0 12px}
+.legal h3{font-size:1.05rem;margin:22px 0 8px}
+.legal p,.legal li{color:var(--brun-cacao);font-size:.98rem}
+.legal ul{padding-left:20px;margin:8px 0 14px}
+.legal li{margin-bottom:6px}
+.legal a{color:var(--terracotta-d);text-decoration:underline}
+.legal .maj{font-size:.85rem;opacity:.75;margin-top:36px}
+mark.todo{background:#F3D27A;color:var(--noir-cacao);padding:1px 5px}
+.footer-bottom a{color:inherit;text-decoration:underline}
