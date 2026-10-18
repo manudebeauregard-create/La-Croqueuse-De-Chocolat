@@ -336,12 +336,12 @@ section + section{border-top:1px solid var(--ligne)}
 @media (max-width:860px){.hero-photo{aspect-ratio:16/10;margin:18px 0}}
 
 /* ---------- parcours : visuel ---------- */
-.parcours-photo{aspect-ratio:21/9;margin-top:36px}
+.parcours-photo{aspect-ratio:16/9;margin-top:36px}
 @media (max-width:860px){.parcours-photo{aspect-ratio:16/10;margin-top:24px}}
 
 /* ---------- visuels accueil ---------- */
 .offer-photo{aspect-ratio:4/3;margin:-36px -30px 24px}
-.b2b-photo{aspect-ratio:21/9;margin:0 0 36px}
+.b2b-photo{aspect-ratio:2/1;margin:0 0 36px}
 @media (max-width:860px){.b2b-photo{aspect-ratio:16/10;margin-bottom:24px}}
 
 /* ---------- pages légales ---------- */

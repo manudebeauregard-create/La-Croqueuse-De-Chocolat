@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Cercle Bean to Bar Chocolat — La Croqueuse de Chocolat</title>
+<meta name="description" content="Le Cercle Bean to Bar Chocolat : dégustations entre passionnés, rencontres avec des artisans chocolatiers, 4 rencontres par an.">
+<link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo"><img src="logo.png" alt="La Croqueuse de Chocolat — By Emmanuelle"></a>
+    <nav class="nav" id="nav">
+      <div class="nav-head"><a href="index.html" class="logo"><img src="logo.png" alt="La Croqueuse de Chocolat"></a><button class="nav-close" id="navClose" type="button" aria-label="Fermer le menu">✕</button></div>
+      <a href="ateliers.html">Ateliers</a>
+      <a href="parcours-sensoriel.html">Parcours sensoriel</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="blog.html">Blog</a>
+      <a href="le-cercle.html" class="active">Le Cercle</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="section-tag">Le Cercle</p>
+    <h1 style="max-width:none">Cercle Bean to Bar Chocolat</h1>
+    <p class="lede">Un lieu où l'on déguste entre passionnés, et un lieu de rencontre et de partage dédié à la découverte du chocolat et aux artisans qui le créent.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="legal">
+      <p><strong>Chère passionnée, cher passionné de chocolat bean-to-bar,</strong></p>
+      <p>Le chocolat peut être bien plus qu'une gourmandise : il est le fruit d'un savoir-faire, d'un terroir, d'une histoire et d'un travail minutieux qui commence dès la fève de cacao.</p>
+      <p>C'est dans cet esprit que j'ai le plaisir de vous inviter à rejoindre le tout premier Cercle Bean to Bar Chocolat, un lieu où l'on dégustera entre passionnés ou amateurs désireux de mieux connaître ce chocolat, mais aussi un lieu de rencontre et de partage dédié à la découverte du chocolat et aux artisans qui le créent.</p>
+      <p>Le Cercle rassemble celles et ceux qui souhaitent approfondir leur connaissance du chocolat, affiner leur palais et partir à la rencontre des femmes et des hommes qui façonnent des chocolats singuliers avec passion et exigence.</p>
+      <p>En tant que membre, vous aurez accès à des expériences soigneusement sélectionnées :</p>
+      <ul>
+        <li>Des dégustations de chocolats bean-to-bar aux profils aromatiques remarquables ;</li>
+        <li>Des rencontres avec des artisans chocolatiers torréfacteurs et des acteurs de la filière cacao ;</li>
+        <li>La découverte d'éditions limitées ;</li>
+        <li>Des moments d'échange entre passionnés désireux de mieux comprendre et apprécier l'univers du cacao.</li>
+      </ul>
+      <p>Le bean-to-bar incarne une approche authentique du chocolat : le respect du produit, la transparence des origines et la valorisation du travail artisanal à chaque étape de fabrication.</p>
+      <p>Rejoindre le Cercle, c'est intégrer une communauté de passionnés curieux d'apprendre, de goûter et de partager autour d'un chocolat vivant, riche de ses origines et de ses savoir-faire.</p>
+      <p>Je serais ravie de vous compter parmi les premiers membres de cette belle aventure gourmande, qui se rencontreront dans un lieu central de la capitale, à raison de 4 rencontres dans l'année, de 19h30 à 22h00.</p>
+
+      <h2>Les rencontres</h2>
+      <ul>
+        <li><strong>1re rencontre : jeudi 25 février 2027</strong></li>
+        <li>Puis les mercredis <strong>21 avril</strong>, <strong>29 septembre</strong> et <strong>24 novembre</strong> 2027</li>
+      </ul>
+
+      <p>Avec toute ma passion du chocolat,<br><strong>Emmanuelle</strong><br>Présidente du Cercle Bean to Bar Chocolat</p>
+
+      <h2 id="adherer">Adhérer au Cercle</h2>
+      <ul>
+        <li>Membre simple : <strong>150 €</strong></li>
+        <li>Membres couple : <strong>250 €</strong></li>
+        <li>Jeune de moins de 30 ans : <strong>60 €</strong></li>
+        <li>Bienfaiteur : à partir de <strong>300 €</strong></li>
+      </ul>
+      <p>Vous préférez le papier ? <a href="bulletin-adhesion-cercle.pdf">Télécharger le bulletin d'adhésion (PDF)</a>.</p>
+    </div>
+
+    <form class="contact-form" name="adhesion-cercle" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top:32px">
+      <input type="hidden" name="form-name" value="adhesion-cercle">
+      <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+      <div><label for="c-nom">Nom</label><input type="text" id="c-nom" name="nom" required></div>
+      <div><label for="c-prenom">Prénom</label><input type="text" id="c-prenom" name="prenom" required></div>
+      <div><label for="c-adresse">Adresse</label><input type="text" id="c-adresse" name="adresse" required></div>
+      <div><label for="c-cp">Code postal</label><input type="text" id="c-cp" name="code-postal" required></div>
+      <div><label for="c-ville">Ville</label><input type="text" id="c-ville" name="ville" required></div>
+      <div><label for="c-tel">Téléphone</label><input type="tel" id="c-tel" name="telephone"></div>
+      <div><label for="c-email">Email</label><input type="email" id="c-email" name="email" required></div>
+      <div>
+        <label for="c-formule">Type d'adhésion</label>
+        <select id="c-formule" name="formule">
+          <option>Membre simple — 150 €</option>
+          <option>Membres couple — 250 €</option>
+          <option>Jeune de moins de 30 ans — 60 €</option>
+          <option>Bienfaiteur — à partir de 300 €</option>
+        </select>
+      </div>
+      <div>
+        <label for="c-montant">Montant (adhésion bienfaiteur uniquement)</label>
+        <input type="text" id="c-montant" name="montant-bienfaiteur" inputmode="numeric">
+      </div>
+      <div>
+        <label style="font-weight:400;display:flex;gap:10px;align-items:flex-start"><input type="checkbox" name="engagement" required style="width:auto;margin-top:4px"><span>Je déclare souhaiter devenir membre de l'association « Cercle Bean to Bar Chocolat » et je reconnais avoir pris connaissance des statuts et du règlement intérieur. <mark class="todo">[À COMPLÉTER : liens vers les statuts et le règlement intérieur]</mark></span></label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-self:start">Envoyer ma demande d'adhésion</button>
+    </form>
+    <p style="margin-top:20px;font-size:.85rem;color:var(--brun-cacao);max-width:60ch">Règlement par virement sur le compte de l'association. <mark class="todo">[À COMPLÉTER : RIB ou façon dont il est transmis]</mark> Les informations saisies servent à traiter votre demande d'adhésion (voir les <a href="mentions-legales.html" style="text-decoration:underline">mentions légales</a>).</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img src="logo.png" alt="La Croqueuse de Chocolat"></a>
+        <p style="margin-top:16px;max-width:32ch">40 Rue Emile Landrin<br>92100 Boulogne-Billancourt</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <ul>
+          <li><a href="ateliers.html">Ateliers</a></li>
+          <li><a href="parcours-sensoriel.html">Parcours sensoriel</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="le-cercle.html">Le Cercle</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0608464870">06 08 46 48 70</a></li>
+          <li><a href="mailto:croqueusedechocolat@gmail.com">croqueusedechocolat@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre</h4>
+        <ul>
+          <li><a href="#">Instagram — Croqueuse by Emmanuelle</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> La Croqueuse de Chocolat</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js?v=8"></script>
+</body>
+</html>

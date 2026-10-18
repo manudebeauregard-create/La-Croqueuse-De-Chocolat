@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Parcours sensoriel — Abonnement chocolat Bean to Bar | La Croqueuse de Chocolat</title>
 <meta name="description" content="Deux abonnements annuels pour voyager d'origine en origine : Bean to Bar et Sélection de la Croqueuse, 159€ TTC, trois envois de trois tablettes par an.">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -18,6 +18,7 @@
       <a href="parcours-sensoriel.html" class="active">Parcours sensoriel</a>
       <a href="a-propos.html">À propos</a>
       <a href="blog.html">Blog</a>
+      <a href="le-cercle.html">Le Cercle</a>
     </nav>
     <div class="nav-actions">
       <a href="#sabonner" class="btn btn-primary">S'abonner</a>
@@ -83,7 +84,7 @@
       <div class="step">
         <span class="step-num">03</span>
         <h3>Vous dégustez, seul ou accompagné</h3>
-        <p>La fiche vous guide pas à pas — vous pouvez aussi la partager en famille ou entre amis pour une mini dégustation maison.</p>
+        <p>La fiche vous guide pas à pas.</p>
       </div>
     </div>
   </div>
@@ -105,7 +106,11 @@
     </div>
     <div class="faq-item">
       <h3>Quand partent les envois ?</h3>
-      <p>Trois fois par an, à intervalles réguliers, à partir de la date de votre inscription.</p>
+      <p>Trois fois par an, à intervalles réguliers, à partir de la date de votre inscription, ou de la date du 1er envoi que vous indiquez dans le formulaire (utile pour un cadeau).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Puis-je offrir un abonnement ?</h3>
+      <p>Oui. Dans le formulaire, indiquez que c'est un cadeau, le nom et le prénom de la personne qui le reçoit, son adresse de livraison et la date souhaitée du 1er envoi.</p>
     </div>
     <div class="faq-item">
       <h3>Le tarif inclut-il la livraison ?</h3>
@@ -124,7 +129,7 @@
       <input type="hidden" name="form-name" value="abonnement-parcours">
       <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
       <div>
-        <label for="nom">Nom et prénom</label>
+        <label for="nom">Votre nom et prénom</label>
         <input type="text" id="nom" name="nom" required>
       </div>
       <div>
@@ -132,7 +137,7 @@
         <input type="email" id="email" name="email" required>
       </div>
       <div>
-        <label for="adresse">Adresse de livraison</label>
+        <label for="adresse">Adresse de livraison (celle de la personne qui reçoit les tablettes)</label>
         <input type="text" id="adresse" name="adresse">
       </div>
       <div>
@@ -141,6 +146,21 @@
           <option>Bean to Bar — 159€ TTC / an</option>
           <option>Sélection de la Croqueuse — 159€ TTC / an</option>
         </select>
+      </div>
+      <div>
+        <label for="cadeau">Cet abonnement est-il un cadeau ?</label>
+        <select id="cadeau" name="cadeau">
+          <option>Non, c'est pour moi</option>
+          <option>Oui, je l'offre</option>
+        </select>
+      </div>
+      <div>
+        <label for="beneficiaire">Si c'est un cadeau : nom et prénom de la personne à qui vous l'offrez</label>
+        <input type="text" id="beneficiaire" name="beneficiaire">
+      </div>
+      <div>
+        <label for="premier-envoi">Date souhaitée du 1er envoi (facultatif)</label>
+        <input type="date" id="premier-envoi" name="premier-envoi">
       </div>
       <button type="submit" class="btn btn-primary" style="justify-self:start">Je m'abonne</button>
     </form>
@@ -162,13 +182,14 @@
           <li><a href="parcours-sensoriel.html">Parcours sensoriel</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="blog.html">Blog</a></li>
+          <li><a href="le-cercle.html">Le Cercle</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:0608464870">06 08 46 48 70</a></li>
-          <li><a href="mailto:manudebeauregard@gmail.com">manudebeauregard@gmail.com</a></li>
+          <li><a href="mailto:croqueusedechocolat@gmail.com">croqueusedechocolat@gmail.com</a></li>
         </ul>
       </div>
       <div>
@@ -186,6 +207,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=7"></script>
+<script src="main.js?v=8"></script>
 </body>
 </html>
